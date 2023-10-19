@@ -1,0 +1,26 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scatter Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <h1>Scatter Plot</h1>
+    <div>
+        <select id="y-selector">
+            <option value="avg_depth_of_target">Avg Depth of Target</option>
+            <option value="contested_catch_rate">Contested Catch Rate</option>
+            <option value="drop_rate">Drop Rate</option>
+            <option value="yards_after_catch_per_reception">Yards After Catch</option>
+            <option value="yprr">YPRR</option>
+        </select>
+    </div>
+    <div id="scatter-plot"></div>
+
+    <!-- Use url_for to generate the correct URL for static files -->
+    <script src="{{ url_for('static', filename='scatterplot.js') }}"></script>
+</body>
+</html>
+
