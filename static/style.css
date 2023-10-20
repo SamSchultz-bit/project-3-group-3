@@ -29,3 +29,13 @@ h1 {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
