@@ -12,7 +12,7 @@ This project looks at various football statistics on college wide receivers at D
 2. (Something about the Flask?)
 
 3. The following visualizations were created using Javascript, HTML, and CSS and includes a drop down menu that displays the graphs by year. 
-    * A scatter plot with a drop down menu that looks at the following relationship
+    * A scatter plot with a drop down menu that looks at the following relationships
         * Receiving Grade vs Average Depth of Target
         * Receiving Grade vs Contested Catch Rate
         * Receiving Grade vs Drop Rate
@@ -22,5 +22,11 @@ This project looks at various football statistics on college wide receivers at D
     * A scatter plot that looks at team success grade vs receiving grade
 
     * A bubble chart that looks at ADOT vs YAC with the bubble size as receiving grade. 
+
+4. Then GitHub Pages was used to display the graphs. 
+
+## References
+
+1. https://www.chartjs.org/
 
 

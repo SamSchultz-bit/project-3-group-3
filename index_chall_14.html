@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>College Football Wide Receiver Statistics</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Scatter Plot and Pie Chart</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -38,22 +43,36 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div id="box_and_whisker"></div>
+        <h3>Stats that Affect RECV Grade</h3>
+        <div>
+            <select id="y-selector">
+                <option value="avg_depth_of_target">Avg Depth of Target</option>
+                <option value="contested_catch_rate">Contested Catch Rate</option>
+                <option value="drop_rate">Drop Rate</option>
+                <option value="yards_after_catch_per_reception">Yards After Catch</option>
+                <option value="yprr">YPRR</option>
+            </select>
+        </div>
       </div>
       <div class="col-md-5">
-        <div id="scatter1"></div>
+        <h3>PFF RECV Grades</h3>
+        <canvas id="bar-chart" width="200" height="115"></canvas>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-6">
+        <h3>Team Success Grade vs Receiving Grade</h3>
         <div id="scatter2"></div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-6">
+        <h3>ADOT vs YAC grade</h3>
         <div id="bubble"></div>
       </div>
     </div>
   </div>
 
+  <script src="{{ url_for('static', filename='scatterplot.js') }}"></script>
+  <script src="{{ url_for('static', filename='piechart.js') }}"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="./static/js/app.js"></script>
