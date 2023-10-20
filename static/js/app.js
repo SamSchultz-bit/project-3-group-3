@@ -1,5 +1,4 @@
-// grabbing JSON data url 
-const url = "Our_Flask_Website?";
+const url = //This might be a file??;
 
 //Fetch the JSON data and console log it
 d3.json(url).then(function (data) {
@@ -16,10 +15,10 @@ d3.json(url).then(function (data) {
 });
 
 // function to activate when a user changes dropdown menu
+// add bar graph
 function yearChanged(year) {
     winnerAndFinalists(year)
     updateBoxWhisker(year)
-    updateManZoneScatter(year)
     updateTeamScatter(year)
     updateBubbleChart(year)
 };
@@ -38,7 +37,6 @@ function winnerAndFinalists(year) {
     });
 }
 
-
 //define function for BoxAndWhisker
 
 function updateBoxWhisker(year) {
@@ -49,21 +47,28 @@ function updateBoxWhisker(year) {
     });
 }
 
-//define function for ManZoneScatter
+//define function for first scatter plot
 
-function updateManZoneScatter(year) {
+function updateScatter1(year) {
     d3.json(url).then(function (data) {
-        let manZoneScatter = d3.select("#scatter1");
-
-        //additional function updateManZoneScatter here
+        let scatterPlot = d3.select("#scatter1");
+        //put in Sam's code for his scatter plot
+    
+        }
     });
 }
+
 
 //define function for indVsTeamScatter
 
 function updateTeamScatter(year) {
     d3.json(url).then(function (data) {
         let teamScatter = d3.select("#scatter2");
+        //get array of team success stats
+        //get array of wide receiver success stats
+
+    
+        }
     });
 }
 
@@ -78,15 +83,16 @@ function updateBubbleChart(year) {
         let bubADOT =   ;
         let bubYAC =    ;
         let bubGrade =  ;
+        let playerNames = 
 
         let bubTraceData = [{
             x: bubADOT,
             y: bubYAC, 
-            text: ??, 
+            text: playerNames , 
             mode: "markers", 
             marker : {
                 size: bubGrade,
-                color: ??, 
+                color: bubGrade, 
             }
         }]
 

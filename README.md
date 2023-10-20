@@ -1,18 +1,26 @@
 # Project3-Group3
 
-This project was created by member of Group 3, who are Sam S., Colin V., Logan S., Esther B., and Sha'miah L. 
+This project was created by Group 3, which includes Esther B., Sha'miah L., Logan S., Sam S., and Colin V.
 
-## Statistics on College Wide Receivers 
+## College Football Statistics on Wide Receivers Project Overview
 
-In this project college football statistics were collected and displayed on a website using various visualizations and sorted by the selected year. 
+This project looks at various football statistics on college wide receivers at Division 1 schools and displays that data on a website using various visualizations and sorted by the selected year. 
 
 ## Coding
-1. First various football statistics were scraped data various football statistics from https://premium.pff.com. These statistics included RECV, TGT, Y/RR, ADOT, Man Vs Zone, Team Success, and YAC. Once the data was cleaned up it was transferred to an SQL database. 
+1. First various football statistics were taken from https://premium.pff.com as CSV files. Included in these statistics were RECV, TGT, Y/RR, ADOT, Team Success, and YAC. Then a SQL database was used to house the data.  
 
-2. Next the code is transferred to HTML using a Python Flask API (???)
+2. (Something about the Flask?)
 
-3. Four visualizations were created using Javascript and HTML. The visualizations included a box & whisker plot that looks at RECV vs TGT, Y/RR, and ADOT, a scatter plot that looks at Y/RR Man vs Zone, a scatter plot Receiving Grade vs team success, and a bubble chart that looks at ADOT vs YAC. 
+3. The following visualizations were created using Javascript, HTML, and CSS and includes a drop down menu that displays the graphs by year. 
+    * A scatter plot with a drop down menu that looks at the following relationship
+        * Receiving Grade vs Average Depth of Target
+        * Receiving Grade vs Contested Catch Rate
+        * Receiving Grade vs Drop Rate
+        * Receiving Grade vs Yards Run After Catch
+    * A bar chart that was created using the JavaScript Library Chart.js and compares the receiving grades of players in different ranges. 
 
-4. A drop down menu was created so the user can select the year for the statistics they want to see visualized. 
+    * A scatter plot that looks at team success grade vs receiving grade
+
+    * A bubble chart that looks at ADOT vs YAC with the bubble size as receiving grade. 
 
 
