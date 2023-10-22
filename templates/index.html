@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--Title and import libraries/css file--> 
     <title>Scatter Plot and Pie Chart</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -8,9 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!--Organize Graphs into dashboard--> 
     <div class="container">
         <div class="column">
             <h1>PFF RECV Grades</h1>
+            <!--chart.js chart--> 
             <canvas id="bar-chart" width="200" height="115"></canvas>
         </div>
         <div class="column">
@@ -27,8 +30,8 @@
             <div id="scatter-plot"></div>
         </div> 
     </div>
-
+    <!--access chart files--> 
     <script src="{{ url_for('static', filename='scatterplot.js') }}"></script>
-    <script src="{{ url_for('static', filename='piechart.js') }}"></script>
+    <script src="{{ url_for('static', filename='barchart.js') }}"></script>
 </body>
 </html>

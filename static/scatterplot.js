@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateScatterPlot() {
         const selectedY = ySelector.value;
 
-        // Fetch data from Flask API
+        // Fetch data from Flask 
         fetch('/get_data', {
             method: 'POST',
             body: JSON.stringify({ selected_y: selectedY }),
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return response.json();
         })
-        // Troubleshooting steps
+        // Troubleshooting graph 
         .then(data => {
-            console.log('Received data:', data); // Log the received data
+            console.log('Received data:', data); 
 
             // Clear the existing plot
             while (scatterPlot.firstChild) {
@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Initialize the scatter plot with the default selected value
+    // Call function
     updateScatterPlot();
 });

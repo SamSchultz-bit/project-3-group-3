@@ -1,4 +1,4 @@
-// static/piechart.js
+
 document.addEventListener('DOMContentLoaded', function () {
     const barChartCanvas = document.getElementById('bar-chart').getContext('2d');
 
@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('/get_pie_data')
         .then(response => response.json())
         .then(data => {
-            // Filter data for values between 40 and 100
+            // Set range for bar chart
             const filteredData = data.filter(value => value >= 40 && value <= 100);
 
-            // Count data within each group (e.g., 40-49, 50-59, etc.)
+            // Group data for barchart
             const groupedData = {};
             for (let i = 40; i <= 100; i += 10) {
                 const range = `${i}-${i + 9}`;
                 groupedData[range] = filteredData.filter(value => value >= i && value <= i + 9).length;
             }
-
+            // create barchart
             new Chart(barChartCanvas, {
                 type: 'bar',
                 data: {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     datasets: [{
                         label: 'Count',
                         data: Object.values(groupedData),
-                        backgroundColor: 'blue', // Bar color
+                        backgroundColor: 'blue', 
                     }]
                 },
                 options: {
