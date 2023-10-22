@@ -1,0 +1,41 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Dropdown styling */
+#y-selector {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Scatter plot container styling */
+#scatter-plot {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
