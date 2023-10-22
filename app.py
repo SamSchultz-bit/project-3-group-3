@@ -1,12 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
+import numpy as np
+from scipy import stats
 
 app = Flask(__name__)
 
-# Impoort Data
-data = pd.read_csv('data.csv')
+# Adjust the file path to the new location
+data = pd.read_csv('cfb-database/2022-receiving-summary.csv')
+
 # Handle null values in data
 data.fillna(0, inplace=True)
+
+# Filter data for targets greater than 32
+data = data[data['targets'] > 32]
 
 # Index Page
 @app.route('/')
@@ -20,7 +26,15 @@ def get_data():
     x_data = data['grades_pass_route']
     y_data = data[selected_y]
 
-    response_data = {'x': x_data.tolist(), 'y': y_data.tolist()}
+    # Perform linear regression
+    slope, intercept, r_value, p_value, std_err = stats.linregress(x_data, y_data)
+
+    response_data = {
+        'x': x_data.tolist(),
+        'y': y_data.tolist(),
+        'line_of_best_fit': [slope * x + intercept for x in x_data],
+        'r_squared': r_value**2
+    }
     return jsonify(response_data)
 
 # Load data for bar chart

@@ -13,6 +13,12 @@ h1 {
     color: #333;
 }
 
+/* Paragraph styling */
+p {
+    text-align: center;
+    color: #666;
+}
+
 /* Dropdown styling */
 #y-selector {
     display: block;
@@ -32,6 +38,8 @@ h1 {
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .column {

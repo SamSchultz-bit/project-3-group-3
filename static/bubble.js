@@ -23,8 +23,6 @@ function yearChanged(year) {
     updateBubbleChart(year)
 };
 
-// define function for Winners and Finalists for each year
-
 function winnerAndFinalists(year) {
     d3.json(url).then(function (data) {
         let winnerPanel = d3.select("#winner_finalists");
@@ -34,41 +32,6 @@ function winnerAndFinalists(year) {
 
 
         //addition function winnerAndFinalist code here
-    });
-}
-
-//define function for BoxAndWhisker
-
-function updateBoxWhisker(year) {
-    d3.json(url).then(function (data) {
-        let boxWhisker = d3.select("#box_and_whisker");
-
-        //additional function updateBoxWhisker code here
-    });
-}
-
-//define function for first scatter plot
-
-function updateScatter1(year) {
-    d3.json(url).then(function (data) {
-        let scatterPlot = d3.select("#scatter1");
-        //put in Sam's code for his scatter plot
-    
-        }
-    });
-}
-
-
-//define function for indVsTeamScatter
-
-function updateTeamScatter(year) {
-    d3.json(url).then(function (data) {
-        let teamScatter = d3.select("#scatter2");
-        //get array of team success stats
-        //get array of wide receiver success stats
-
-    
-        }
     });
 }
 
