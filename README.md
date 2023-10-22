@@ -9,7 +9,7 @@ This project looks at various football statistics on college wide receivers at D
 ## Coding
 1. First various football statistics were taken from https://premium.pff.com as CSV files. Included in these statistics were RECV, TGT, Y/RR, ADOT, Team Success, and YAC. Then a SQL database was used to house the data.  
 
-2. (Something about the Flask?)
+2. The first few sections of our Flask API loads in our data, fills any null values and filters our dataset to players with atleast 32 targets (the top 4 quintiles of the 2022 data). It then provides a route to the index page. The next sectionsallows the end user to select what data is charted in the scatterplot and to show the r-score for the data. Then it passes data for the barchart.
 
 3. The following visualizations were created using Javascript, HTML, and CSS and includes a drop down menu that displays the graphs by year. 
     * A scatter plot with a drop down menu that looks at the following relationships

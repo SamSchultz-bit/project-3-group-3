@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data: {
                     labels: Object.keys(groupedData),
                     datasets: [{
-                        label: 'Count',
+                        label: 'Players by RECV Grade',
                         data: Object.values(groupedData),
                         backgroundColor: 'blue', 
                     }]

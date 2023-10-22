@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 y: data.y,
                 mode: 'markers',
                 type: 'scatter',
-                marker: { size: 8 }
+                marker: { size: 8 },
+                showLegend: false,
             };
 
             // Line of best fit trace
@@ -42,13 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 mode: 'lines',
                 type: 'scatter',
                 line: { color: 'red' },
-                name: 'Line of Best Fit'
+                showLegend: false,
             };
 
             const layout = {
                 title: `(${selectedY} vs. grades_pass_route)`,
                 xaxis: { title: 'grades_pass_route' },
-                yaxis: { title: selectedY }
+                yaxis: { title: selectedY },
+                showLegend: false,
             };
 
             // Add R-squared annotation
