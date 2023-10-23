@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const ySelector = document.getElementById('y-selector');
     const scatterPlot = document.getElementById('scatter-plot');
 
-
     ySelector.addEventListener('change', updateScatterPlot);
     
     // Function to update scatterplot when dropdown options are selected
@@ -33,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 y: data.y,
                 mode: 'markers',
                 type: 'scatter',
-                marker: { size: 8 },
-                showLegend: false,
+                marker: { size: 8 }
             };
 
             // Line of best fit trace
@@ -44,14 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 mode: 'lines',
                 type: 'scatter',
                 line: { color: 'red' },
-                showLegend: false,
+                name: 'Line of Best Fit'
             };
 
             const layout = {
-                title: `(${selectedY} vs. grades_pass_route)`,
                 xaxis: { title: 'grades_pass_route' },
-                yaxis: { title: selectedY },
-                showLegend: false,
+                yaxis: { title: selectedY }
             };
 
             // Add R-squared annotation
@@ -79,3 +75,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call function
     updateScatterPlot();
 });
+

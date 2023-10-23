@@ -1,4 +1,3 @@
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
     font-size: medium;
@@ -7,19 +6,16 @@ body {
     padding: 0;
 }
 
-/* Header styling */
 h1 {
     text-align: center;
     color: #333;
 }
 
-/* Paragraph styling */
 p {
     text-align: center;
     color: #666;
 }
 
-/* Dropdown styling */
 #y-selector {
     display: block;
     margin: 20px auto;
@@ -27,23 +23,38 @@ p {
     font-size: 16px;
 }
 
-/* Scatter plot container styling */
-#scatter-plot {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .column {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    margin-bottom: 10px; 
+}
+
+.bar-chart-container {
+    margin-bottom: 10px; 
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    
+}
+
+.tall {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px; 
+}
+
+#scatter-plot, #bubble_chart {
+    flex: 1;
+    min-height: 700px; 
+}
+
+.row {
+    margin-bottom: 0;
 }

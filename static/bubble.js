@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const bubbleplot = document.getElementById('bubble_chart');
+    const bubbleChart = document.getElementById('bubble_chart');
 
     // Fetch data from Flask API
     fetch('/get_bubble_data')
