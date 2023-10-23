@@ -47,9 +47,9 @@ def get_pie_data():
 @app.route('/get_bubble_data')
 def get_bubble_data():
     # Replace the example data with your actual bubble chart data
-    x_bubble = [1, 2, 3, 4, 5]  # Replace with your x-axis data
-    y_bubble = [10, 20, 30, 40, 50]  # Replace with your y-axis data
-    size_bubble = [15, 30, 45, 60, 75]  # Replace with your size data
+    x_bubble = data['avg_depth_of_target'].tolist()  
+    y_bubble = data['yards_after_catch'].tolist()  
+    size_bubble = data['grades_pass_route'].tolist()
 
     response_data = {
         'x_bubble': x_bubble,
