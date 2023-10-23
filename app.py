@@ -48,7 +48,7 @@ def get_pie_data():
 def get_bubble_data():
     # Replace the example data with your actual bubble chart data
     x_bubble = data['avg_depth_of_target'].tolist()  
-    y_bubble = data['yards_after_catch'].tolist()  
+    y_bubble = data['yards_after_catch_per_reception'].tolist()  
     size_bubble = data['grades_pass_route'].tolist()
 
     response_data = {
