@@ -14,6 +14,9 @@ data.fillna(0, inplace=True)
 # Filter data for targets greater than 32
 data = data[data['targets'] > 32]
 
+# Filter data for Bubble Chart (grades_pass_route >= 86.8)
+bubble_data = data[data['grades_pass_route'] >= 84.8]
+
 # Index Page
 @app.route('/')
 def index():
@@ -47,9 +50,9 @@ def get_pie_data():
 @app.route('/get_bubble_data')
 def get_bubble_data():
     # Replace the example data with your actual bubble chart data
-    x_bubble = data['avg_depth_of_target'].tolist()  
-    y_bubble = data['yards_after_catch_per_reception'].tolist()  
-    size_bubble = data['grades_pass_route'].tolist()
+    x_bubble = bubble_data['avg_depth_of_target'].tolist()  
+    y_bubble = bubble_data['yards_after_catch_per_reception'].tolist()  
+    size_bubble = bubble_data['grades_pass_route'].tolist()
 
     response_data = {
         'x_bubble': x_bubble,
