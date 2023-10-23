@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--Title and import libraries/css file--> 
+    <!-- Title and import libraries/css file -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,44 +12,57 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!--Organize Graphs into dashboard--> 
+    <!-- Organize Graphs into separate rows -->
+    <!-- Football Statistics Dashboard -->
     <div class="container">
         <div class="row">
             <div class="column text-center">
                 <h1>Football Statistics Dashboard</h1>
                 <p>Use the interactive charts below to explore the dataset</p>
-            </div>          
-        </div>
-    </div>
-    <div class="container">
-        <div class="column">
-            <h1>PFF RECV Grades</h1>
-            <!--chart.js chart--> 
-            <canvas id="bar-chart" width="200" height="115"></canvas>
-        </div>
-        <div class="column">
-            <h1>Stats that Affect RECV Grade</h1>
-            <div>
-                <select id="y-selector">
-                    <option value="avg_depth_of_target">Avg Depth of Target</option>
-                    <option value="contested_catch_rate">Contested Catch Rate</option>
-                    <option value="drop_rate">Drop Rate</option>
-                    <option value="yards_after_catch_per_reception">Yards After Catch</option>
-                    <option value="yprr">YPRR</option>
-                </select>
-            </div>
-            <div id="scatter-plot"></div>
-        </div> 
-        <div class="row">
-            <div class="column">
-                <!--code for bubble chart-->
             </div>
         </div>
     </div>
     
-    <!--access chart files--> 
+    <!-- Row for PFF RECV Grades (Bar Chart) -->
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1>PFF RECV Grades</h1>
+                <!-- Chart.js chart for PFF RECV Grades -->
+                <canvas id="bar-chart" width="200" height="115"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Row for Scatter Plot -->
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1>Stats that Affect RECV Grade</h1>
+                <div>
+                    <select id="y-selector">
+                        <option value="avg_depth_of_target">Avg Depth of Target</option>
+                        <!-- Add other options here for y-axis variables -->
+                    </select>
+                </div>
+                <div id="scatter-plot"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Row for Bubble Chart -->
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1>Bubble Chart</h1>
+                <div id="bubble_chart"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Access chart files -->
     <script src="static/scatterplot.js"></script>
     <script src="static/barchart.js"></script>
-    <script src="./static/js/bubble.js"></script>
+    <script src="static/bubble.js"></script>
 </body>
 </html>

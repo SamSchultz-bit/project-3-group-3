@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ySelector = document.getElementById('y-selector');
     const scatterPlot = document.getElementById('scatter-plot');
 
+
     ySelector.addEventListener('change', updateScatterPlot);
     
     // Function to update scatterplot when dropdown options are selected

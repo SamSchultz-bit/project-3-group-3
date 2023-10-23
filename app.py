@@ -43,5 +43,20 @@ def get_pie_data():
     grades_pass_route_data = data['grades_pass_route'].tolist()
     return jsonify(grades_pass_route_data)
 
+# Load data for the bubble chart
+@app.route('/get_bubble_data')
+def get_bubble_data():
+    # Replace the example data with your actual bubble chart data
+    x_bubble = [1, 2, 3, 4, 5]  # Replace with your x-axis data
+    y_bubble = [10, 20, 30, 40, 50]  # Replace with your y-axis data
+    size_bubble = [15, 30, 45, 60, 75]  # Replace with your size data
+
+    response_data = {
+        'x_bubble': x_bubble,
+        'y_bubble': y_bubble,
+        'size_bubble': size_bubble,
+    }
+    return jsonify(response_data)
+
 if __name__ == '__main__':
     app.run(debug=True)
