@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             const layout = {
-                title: `Bubble Chart`
+                title: `YAC/R vs ADOT with RECV Grade`,
+                xaxis: { title: 'Avg Depth of Target' }, 
+                yaxis: { title: 'Yards After Catch per Reception' }   
+
             };
 
             Plotly.newPlot('bubble_chart', [trace], layout);

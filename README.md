@@ -20,8 +20,6 @@ This project looks at various football statistics on college wide receivers at D
         * Receiving Grade vs Yards per Route Run
     * A bar chart that was created using the JavaScript Library Chart.js and compares the receiving grades of players in different ranges. 
 
-    * A scatter plot that looks at team success grade vs receiving grade
-
     * A bubble chart that looks at Average Depth of Target vs Yards After Catch with the bubble size as receiving grade. 
 
 4. Then GitHub Pages was used to display the graphs. 

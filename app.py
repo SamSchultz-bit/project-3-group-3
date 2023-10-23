@@ -5,13 +5,13 @@ from scipy import stats
 
 app = Flask(__name__)
 
-# Adjust the file path to the new location
+# Load in data
 data = pd.read_csv('cfb-database/2022-receiving-summary.csv')
 
 # Handle null values in data
 data.fillna(0, inplace=True)
 
-# Filter data for targets greater than 32
+# Filter data for players with targets greater than 32
 data = data[data['targets'] > 32]
 
 # Filter data for Bubble Chart (grades_pass_route >= 86.8)

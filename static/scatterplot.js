@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             body: JSON.stringify({ selected_y: selectedY }),
             headers: { 'Content-Type': 'application/json' }
         })
+        // Troubleshoot errors
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -32,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 y: data.y,
                 mode: 'markers',
                 type: 'scatter',
-                marker: { size: 8 }
+                marker: { size: 8 },
+                name: 'Player'
             };
 
             // Line of best fit trace
@@ -42,18 +44,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 mode: 'lines',
                 type: 'scatter',
                 line: { color: 'red' },
-                name: 'Line of Best Fit'
+                name: 'Trend Line'
             };
 
             const layout = {
-                xaxis: { title: 'grades_pass_route' },
+                xaxis: { title: 'RECV Grade' },
                 yaxis: { title: selectedY }
             };
 
             // Add R-squared annotation
             const rSquaredAnnotation = {
-                x: 30, // Adjust the X position as needed
-                y: 5,  // Adjust the Y position as needed
+                x: 30, 
+                y: 5,  
                 text: `R²: ${data.r_squared.toFixed(4)}`,
                 showarrow: false,
                 font: {
