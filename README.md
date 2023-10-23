@@ -24,8 +24,10 @@ This project looks at various football statistics on college wide receivers at D
 
 4. Then GitHub Pages was used to display the graphs. 
 
+## Presentation
+https://docs.google.com/presentation/d/1FACFn_2dLRy_qkEa7H3wLFY9IREnHua68n7tWTS6ZdY/edit?usp=sharing
+
 ## References
 
 1. https://www.chartjs.org/
-
 

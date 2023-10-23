@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Group data for barchart
             const groupedData = {};
-            for (let i = 40; i <= 100; i += 10) {
+            for (let i = 40; i <= 99; i += 10) {
                 const range = `${i}-${i + 9}`;
                 groupedData[range] = filteredData.filter(value => value >= i && value <= i + 9).length;
             }
